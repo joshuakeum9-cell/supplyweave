@@ -1,0 +1,102 @@
+.columns {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.form {
+  margin-top: var(--space-5);
+}
+
+.note {
+  color: var(--ink-2);
+  font-size: var(--text-sm);
+  margin-top: var(--space-2);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+  margin-top: var(--space-5);
+}
+
+.specList,
+.resultList {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.specList div,
+.resultList div {
+  display: grid;
+  grid-template-columns: 14rem 1fr;
+  gap: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--line);
+}
+
+.specList dt,
+.resultList dt {
+  color: var(--ink-3);
+  font-size: var(--text-sm);
+}
+
+.specList dd,
+.resultList dd {
+  margin: 0;
+}
+
+.demandTable {
+  margin: var(--space-6) 0;
+}
+
+.controlsHeading {
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--line);
+}
+
+.decision {
+  margin-top: var(--space-4);
+}
+
+@media (max-width: 1023px) {
+  .columns {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+  }
+
+  .specList div,
+  .resultList div {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+}
+
+@media (max-width: 640px) {
+  /* Stack the demand table into labelled rows rather than scrolling sideways. */
+  .demandTable thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .demandTable tr {
+    display: grid;
+    gap: var(--space-1);
+    padding: var(--space-4) 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .demandTable th,
+  .demandTable td {
+    border: 0;
+    padding: 0;
+  }
+}

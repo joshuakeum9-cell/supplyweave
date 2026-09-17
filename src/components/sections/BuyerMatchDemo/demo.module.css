@@ -1,0 +1,327 @@
+.scenarioBar {
+  margin-bottom: var(--space-7);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--line);
+}
+
+.scenarioLegend {
+  font-weight: 550;
+  margin-bottom: var(--space-3);
+}
+
+.scenarioOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+}
+
+.scenarioOption {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.scenarioRadio {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+  flex: none;
+}
+
+.scenarioSummary {
+  margin-top: var(--space-4);
+  color: var(--ink-2);
+  max-width: var(--prose);
+}
+
+.lanes {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.laneBody {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.matchingFields {
+  padding: var(--space-4);
+  background: var(--surface);
+  border-radius: var(--radius-2);
+}
+
+.matchingFields h4 {
+  margin-bottom: var(--space-3);
+}
+
+.matchingList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+  color: var(--ink-2);
+  font-size: var(--text-sm);
+}
+
+.matchingList li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-2);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+/* Figures */
+.figureRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-7);
+  margin-bottom: var(--space-5);
+}
+
+.figure {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.figureValue {
+  font-size: var(--text-figure);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.figureLabel {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+  font-weight: 600;
+}
+
+/* Capacity bar. The numbers beside it carry the same information, so the bar
+   itself is decorative and hidden from assistive technology. */
+.capacityBar {
+  display: flex;
+  height: 10px;
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  margin: var(--space-3) 0;
+}
+
+.capacityFilled {
+  background: var(--ink);
+  transition: width var(--motion-count) ease-out;
+}
+
+.capacityRemaining {
+  background: repeating-linear-gradient(
+    90deg,
+    var(--surface-2),
+    var(--surface-2) 4px,
+    var(--paper) 4px,
+    var(--paper) 8px
+  );
+  flex: 1;
+}
+
+.capacityLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  font-size: var(--text-sm);
+}
+
+/* Cost comparison */
+.comparison {
+  margin: var(--space-5) 0;
+}
+
+.comparison th,
+.comparison td {
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+}
+
+.comparisonValue {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.savingsRow th,
+.savingsRow td {
+  border-top: 2px solid var(--ink);
+  border-bottom: 0;
+}
+
+/* Stages */
+.stageList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: var(--space-3);
+}
+
+.stage {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--line);
+}
+
+.stageLabel {
+  font-weight: 550;
+}
+
+.stageWaiting .stageLabel {
+  color: var(--ink-3);
+  font-weight: 400;
+}
+
+.stageNote {
+  margin-top: var(--space-1);
+  color: var(--ink-2);
+  font-size: var(--text-sm);
+}
+
+.stageStatusWord {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+/* Result */
+.resultFigures {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+  margin: var(--space-5) 0;
+}
+
+.resultList {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.resultList div {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--line);
+}
+
+.resultList dt {
+  color: var(--ink-3);
+  font-size: var(--text-sm);
+}
+
+.termList {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.termList div {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: var(--space-3);
+}
+
+.termList dt {
+  font-weight: 550;
+}
+
+.termList dd {
+  margin: 0;
+  color: var(--ink-2);
+}
+
+.breakdownTotal th,
+.breakdownTotal td {
+  border-top: 2px solid var(--ink);
+  font-weight: 600;
+}
+
+.reasons {
+  display: grid;
+  gap: var(--space-2);
+  padding-left: var(--space-5);
+  color: var(--ink-2);
+}
+
+.emptyState {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.waiting {
+  color: var(--ink-3);
+}
+
+/* Sticky summary on small screens, so the numbers stay next to the action. */
+.stickySummary {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .lanes {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+  }
+
+  .resultList div,
+  .termList div {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+
+  .stickySummary {
+    position: sticky;
+    bottom: 0;
+    z-index: 5;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+    padding: var(--space-3) var(--space-4);
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-2);
+    box-shadow: 0 1px 2px rgba(27, 27, 31, 0.08);
+  }
+
+  .stickyFigures {
+    display: grid;
+    gap: 2px;
+    font-size: var(--text-sm);
+  }
+
+  .stickyPrice {
+    font-weight: 600;
+    font-size: var(--text-md);
+  }
+}
+
+@media (max-width: 640px) {
+  .resultFigures {
+    grid-template-columns: 1fr;
+  }
+  .figureRow {
+    gap: var(--space-5);
+  }
+}

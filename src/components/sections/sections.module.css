@@ -1,0 +1,281 @@
+/* Hero */
+.hero {
+  padding: var(--space-9) var(--space-5) var(--space-8);
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.heroInner {
+  max-width: 44rem;
+}
+
+.heroLede {
+  margin-top: var(--space-5);
+  font-size: var(--text-lg);
+  color: var(--ink-2);
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+}
+
+.heroMeta {
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 40rem;
+}
+
+.heroMetaItem dt {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+  font-weight: 600;
+}
+
+.heroMetaItem dd {
+  margin: var(--space-2) 0 0;
+}
+
+/* Two column blocks */
+.twoColumn {
+  display: grid;
+  gap: var(--space-7);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.threeColumn {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.columnBody {
+  margin-top: var(--space-3);
+  color: var(--ink-2);
+}
+
+.problemClose {
+  margin-top: var(--space-7);
+  max-width: var(--prose);
+  font-size: var(--text-lg);
+}
+
+/* Two lane flow */
+.flowGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 var(--space-7);
+}
+
+.flowHeader {
+  position: sticky;
+  top: 0;
+  background: var(--paper);
+}
+
+.flowRow {
+  display: contents;
+}
+
+.flowCell {
+  padding: var(--space-5) 0;
+  border-top: 1px solid var(--line);
+}
+
+.flowStepNumber {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--ink-3);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.flowText {
+  margin-top: var(--space-2);
+}
+
+.flowSystem {
+  color: var(--ink-2);
+}
+
+/* Compatibility */
+.compatCard {
+  border-top: 2px solid var(--ink);
+  padding-top: var(--space-4);
+}
+
+.compatCardPartial {
+  border-top-color: var(--caution);
+}
+
+.compatCardFalse {
+  border-top-color: var(--negative);
+}
+
+.compatHeading {
+  margin-top: var(--space-3);
+}
+
+.compatDetail {
+  margin-top: var(--space-4);
+}
+
+.compatDetail dt {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+  font-weight: 600;
+  margin-top: var(--space-3);
+}
+
+.compatDetail dd {
+  margin: var(--space-1) 0 0;
+  color: var(--ink-2);
+}
+
+/* Roadmap */
+.phaseList {
+  display: grid;
+  gap: var(--space-6);
+  list-style: none;
+  padding: 0;
+}
+
+.phase {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--line);
+}
+
+.phaseNumber {
+  font-weight: 600;
+  color: var(--ink-3);
+}
+
+.phaseBody {
+  margin-top: var(--space-3);
+  color: var(--ink-2);
+  max-width: var(--prose);
+}
+
+.phaseStatus {
+  margin-top: var(--space-3);
+}
+
+/* Business model */
+.revenueFigure {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Scope */
+.scopeGrid {
+  display: grid;
+  gap: var(--space-7);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.scopeGroup {
+  break-inside: avoid;
+}
+
+.scopeHeading {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--line);
+}
+
+.scopeList {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-4);
+  display: grid;
+  gap: var(--space-3);
+}
+
+.scopeList li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3);
+  align-items: start;
+  color: var(--ink-2);
+}
+
+.scopeFigure {
+  display: block;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Closing */
+.closing {
+  max-width: var(--prose);
+}
+
+.closing p + p {
+  margin-top: var(--space-4);
+}
+
+/* Footer */
+.footer {
+  padding: var(--space-7) var(--space-5);
+  border-top: 1px solid var(--line);
+  color: var(--ink-2);
+  font-size: var(--text-sm);
+}
+
+.footerInner {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  gap: var(--space-3);
+}
+
+@media (max-width: 1023px) {
+  .twoColumn,
+  .threeColumn,
+  .scopeGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .heroMeta {
+    grid-template-columns: 1fr;
+  }
+
+  /* The two lanes become one ordered sequence, each step still labelled with
+     the lane it belongs to. */
+  .flowGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .phase {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+  .footer {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+}

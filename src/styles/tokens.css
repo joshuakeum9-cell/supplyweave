@@ -1,0 +1,85 @@
+/**
+ * Design tokens. Restrained palette, one accent, no gradients.
+ * Contrast ratios against paper unless stated. All text pairs meet WCAG AA.
+ */
+
+:root {
+  /* Surfaces */
+  --paper: #ffffff;
+  --surface: #f4f4f1;
+  --surface-2: #eaeae6;
+
+  /* Ink */
+  --ink: #1b1b1f; /* 17.2:1 */
+  --ink-2: #45464d; /* 9.4:1 */
+  --ink-3: #5f6068; /* 6.3:1 */
+
+  /* Lines */
+  --line: #d9d9dd; /* decorative only */
+  --line-strong: #8a8b93; /* 3.4:1, meets 3:1 for control borders */
+
+  /* Accent */
+  --accent: #1f4fd1; /* 6.8:1 */
+  --accent-strong: #17409f; /* 9.3:1 */
+  --accent-soft: #e9eefb;
+
+  /* Status */
+  --positive: #1e6f3d; /* 6.2:1 */
+  --positive-soft: #e7f3ea;
+  --caution: #7a4f00; /* 7.1:1 */
+  --caution-soft: #fbf1dc;
+  --negative: #b3261e; /* 6.5:1 */
+  --negative-soft: #fcebea;
+
+  /* Type */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
+  --text-xs: 0.9375rem; /* 15px, the smallest size used anywhere */
+  --text-sm: 1rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.75rem;
+  --text-figure: 2.25rem;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* Shape */
+  --radius-1: 4px;
+  --radius-2: 8px;
+  --container: 1120px;
+  --prose: 68ch;
+
+  /* Motion */
+  --motion-fast: 150ms;
+  --motion-count: 600ms;
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --text-md: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.375rem;
+    --text-2xl: 1.625rem;
+    --text-3xl: 2rem;
+    --text-figure: 1.75rem;
+    --space-9: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast: 0ms;
+    --motion-count: 0ms;
+  }
+}
